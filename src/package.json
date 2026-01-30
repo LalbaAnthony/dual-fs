@@ -2,13 +2,13 @@
   "name": "dual-fs",
   "authors": "Anthony Lalba",
   "version": "1.0.0",
-  "main": "sync-watch.js",
+  "main": "dual-fs.js",
   "directories": {
     "lib": "lib"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node sync-watch.js"
+    "dev": "node dual-fs.js"
   },
   "keywords": [],
   "author": "",

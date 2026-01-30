@@ -12,7 +12,7 @@ const CONFIG = {
     password: 'STr232!13',
     localDir: '.',
     remoteDir: '/web/testAnthony',
-    ignore: ['node_modules/**', '.git/**', '*.log', 'sync-watch.js']
+    ignore: ['node_modules/**', '.git/**', '*.log', 'dual-fs.js']
 };
 
 class Server {
