@@ -1,5 +1,6 @@
 {
   "name": "dual-fs",
+  "authors": "Anthony Lalba",
   "version": "1.0.0",
   "main": "sync-watch.js",
   "directories": {
