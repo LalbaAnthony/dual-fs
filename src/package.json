@@ -1,0 +1,21 @@
+{
+  "name": "dual-fs",
+  "version": "1.0.0",
+  "main": "sync-watch.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node sync-watch.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "basic-ftp": "^5.1.0",
+    "chokidar": "^5.0.0",
+    "ssh2-sftp-client": "^12.0.1"
+  }
+}

@@ -1,0 +1,3 @@
+- [ ] handle a .syncignore file for ignore patterns
+- [ ] add retry logic for failed uploads/deletions
+- [ ] parse config from a JSON file
