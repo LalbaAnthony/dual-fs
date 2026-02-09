@@ -1,3 +1,5 @@
 - [ ] handle a .syncignore file for ignore patterns
 - [ ] add retry logic for failed uploads/deletions
 - [ ] parse config from a JSON file
+- [ ] use npm `pkg` to create a standalone binary, so users don't have to install Node.js
+  - [ ] In README: make both quick start for dev and for use as a standalone binary work
