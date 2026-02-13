@@ -11,10 +11,9 @@
     "lib": "lib"
   },
   "pkg": {
-    "assets": [
-      "assets/**/*",
-      "src/**/*"
-    ],
+    "assets": ["src/**/*"],
+    "scripts": ["src/**/*.js"],
+    "targets": ["node18-win-x64"],
     "outputPath": "dist"
   },
   "scripts": {
