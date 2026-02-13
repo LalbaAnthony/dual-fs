@@ -49,7 +49,7 @@ Ensure Gihub have right to opere on the repo code:
 Full workflow:
 ```sh
 git add .
-git commit -m "Some changes"
+git commit -m "Release"
 
 npm version patch # or 'minor' or 'major'
 
