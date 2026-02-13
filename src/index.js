@@ -1,12 +1,8 @@
-import chokidar from 'chokidar';
-import SftpClient from 'ssh2-sftp-client';
-import ftp from 'basic-ftp';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const chokidar = require('chokidar');
+const SftpClient = require('ssh2-sftp-client');
+const ftp = require('basic-ftp');
+const fs = require('fs');
+const path = require('path');
 
 function loadConfig() {
     const CONFIG_FILE = 'dual-fs-config.json';

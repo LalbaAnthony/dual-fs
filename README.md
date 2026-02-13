@@ -55,3 +55,7 @@ npm version patch # or 'minor' or 'major'
 git push origin main
 git push origin --tags
 ```
+
+## ⚠️ Important
+
+`pkg` npm package does not support ES modules, so the code must be written in CommonJS.
