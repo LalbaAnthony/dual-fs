@@ -8,16 +8,23 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const CONFIG = {
-    type: 'sftp', // ou 'ftp'
-    host: '192.168.0.1',
-    port: 22, // 21 pour FTP
-    username: 'info',
-    password: 'passwordhere',
-    localDir: '.',
-    remoteDir: 'pathhere',
-    ignore: ['node_modules/**', '.git/**', '*.log', 'dual-fs.js']
-};
+function loadConfig() {
+    const CONFIG_FILE = 'dual-fs-config.json';
+    const configPath = path.join(__dirname, CONFIG_FILE);
+    
+    if (!fs.existsSync(configPath)) {
+        console.error(`❌ Fichier de configuration introuvable: ${CONFIG_FILE}`);
+        process.exit(1);
+    }
+
+    try {
+        const configData = fs.readFileSync(configPath, 'utf-8');
+        return JSON.parse(configData);
+    } catch (err) {
+        console.error(`❌ Erreur lors de la lecture du fichier de configuration:`, err.message);
+        process.exit(1);
+    }
+}
 
 class Server {
     constructor(config) {
@@ -116,13 +123,14 @@ class Server {
     }
 }
 
-const server = new Server(CONFIG);
+const config = loadConfig();
+const server = new Server(config);
 
-console.log(`\n👀 Surveillance du dossier: ${path.resolve(CONFIG.localDir)}`);
-console.log(`\n📁 Fichiers ignorés: ${CONFIG.ignore.join(', ')}`);
+console.log(`\n👀 Surveillance du dossier: ${path.resolve(config.localDir)}`);
+console.log(`\n📁 Fichiers ignorés: ${config.ignore.join(', ')}`);
 
-const watcher = chokidar.watch(CONFIG.localDir, {
-    ignored: CONFIG.ignore,
+const watcher = chokidar.watch(config.localDir, {
+    ignored: config.ignore,
     persistent: true,
     ignoreInitial: false,
     awaitWriteFinish: {
@@ -136,13 +144,13 @@ watcher
         console.log('\n🚀 Prêt ! Modifiez un fichier pour commencer...');
     })
     .on('change', async (filePath) => {
-        const relativePath = path.relative(CONFIG.localDir, filePath);
-        const remotePath = path.join(CONFIG.remoteDir, relativePath);
+        const relativePath = path.relative(config.localDir, filePath);
+        const remotePath = path.join(config.remoteDir, relativePath);
         await server.upload(filePath, remotePath);
     })
     .on('unlink', async (filePath) => {
-        const relativePath = path.relative(CONFIG.localDir, filePath);
-        const remotePath = path.join(CONFIG.remoteDir, relativePath);
+        const relativePath = path.relative(config.localDir, filePath);
+        const remotePath = path.join(config.remoteDir, relativePath);
         await server.delete(remotePath);
     })
     .on('error', (error) => {

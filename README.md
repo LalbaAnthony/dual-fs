@@ -4,7 +4,20 @@
 
 - Go to **Releases**
 - Download the lastest available release
-- Get the `.exe` file
+- Drop the `dual-fs.exe` on your project root
+- Create a `dual-fs-config.json` file as:
+```json
+{
+    "type": "sftp",
+    "host": "192.168.0.1",
+    "port": 22,
+    "username": "user",
+    "password": "password",
+    "localDir": ".",
+    "remoteDir": "/path/to/project",
+    "ignore": ["dual-fs.exe", "dual-fs-config.json"]
+}
+```
 
 ## 👨‍💻 Contributing
 
@@ -26,6 +39,7 @@ Ensure Gihub have right to opere on the repo code:
 
 ### Push a new version
 
+Full workflow:
 ```sh
 git add .
 git commit -m "Some changes"
