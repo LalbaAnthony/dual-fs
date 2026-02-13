@@ -1,2 +1,0 @@
-- [ ] Run le fichier .exe et debugger
-- [ ] Faire test ultime conditions reels
