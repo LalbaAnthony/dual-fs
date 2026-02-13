@@ -2,7 +2,9 @@
 
 ## 🚀 Use
 
-...
+- Go to **Releases**
+- Download the lastest available release
+- Get the `.exe` file
 
 ## 👨‍💻 Contributing
 
