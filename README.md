@@ -1,5 +1,11 @@
 # Dual FS
 
+Dual FS is a tool that allows you to synchronize your local files with a remote server in real-time.
+
+It uses SFTP to connect to the remote server and watch for changes in the local directory. When a change is detected, it automatically uploads the changed file to the remote server.
+
+The goal is to mimic a Vite development server: you can edit your files and see the changes reflected on the remote server without needing to manually upload files or restart any services.
+
 ## 🚀 Use
 
 - Go to **Releases**
