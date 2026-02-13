@@ -6,6 +6,14 @@
 
 ## 👨‍💻 Contributing
 
+### Install
+
+```sh
+git clone git@github.com:LalbaAnthony/dual-fs.git
+npm i
+npm run dev
+```
+
 ### Github settings
 
 Ensure Gihub have right to opere on the repo code:
@@ -20,11 +28,7 @@ Ensure Gihub have right to opere on the repo code:
 git add .
 git commit -m "Some changes"
 
-npm version patch  # 1.0.0 -> 1.0.1
-# ou
-npm version minor  # 1.0.0 -> 1.1.0
-# ou
-npm version major  # 1.0.0 -> 2.0.0
+npm version patch # or 'minor' or 'major'
 
 git push origin main
 git push origin --tags
