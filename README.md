@@ -59,3 +59,5 @@ git push origin --tags
 ## ⚠️ Important
 
 `pkg` npm package does not support ES modules, so the code must be written in CommonJS.
+
+We are so constrained to use `chokidar@3.6.0` since `chokidar@5.0.0` is ESM only and so not compatible with `pkg`.
