@@ -4,16 +4,22 @@
   "keywords": [],
   "license": "ISC",
   "description": "",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "bin": "src/index.js",
   "type": "module",
   "directories": {
     "lib": "lib"
   },
   "pkg": {
-    "assets": ["src/**/*"],
-    "scripts": ["src/**/*.js"],
-    "targets": ["node18-win-x64"],
+    "assets": [
+      "src/**/*"
+    ],
+    "scripts": [
+      "src/**/*.js"
+    ],
+    "targets": [
+      "node18-win-x64"
+    ],
     "outputPath": "dist"
   },
   "scripts": {
