@@ -11,6 +11,7 @@ The goal is to mimic a Vite development server: you can edit your files and see 
 - Go to **Releases**
 - Download the lastest available release
 - Drop the `dual-fs.exe` on your project root
+- Add `dual-fs-config.json` and `dual-fs.exe` to your `.gitignore` if you don't want to commit them
 - Create a `dual-fs-config.json` file as:
 ```json
 {

@@ -6,10 +6,11 @@ const path = require('path');
 
 function loadConfig() {
     const CONFIG_FILE = 'dual-fs-config.json';
-    const configPath = path.join(__dirname, CONFIG_FILE);
-    
+    const configPath = path.join(process.cwd(), CONFIG_FILE);
+
     if (!fs.existsSync(configPath)) {
         console.error(`❌ Fichier de configuration introuvable: ${CONFIG_FILE}`);
+        console.error(`📂 Cherché dans: ${configPath}`);
         process.exit(1);
     }
 
