@@ -1,19 +1,26 @@
 {
   "name": "dual-fs",
   "authors": "Anthony Lalba",
+  "keywords": [],
+  "license": "ISC",
+  "description": "",
   "version": "1.0.0",
-  "main": "dual-fs.js",
+  "bin": "src/index.js",
+  "type": "module",
   "directories": {
     "lib": "lib"
   },
+  "pkg": {
+    "assets": [
+      "assets/**/*",
+      "src/**/*"
+    ],
+    "outputPath": "dist"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node dual-fs.js"
+    "dev": "node src/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "basic-ftp": "^5.1.0",
     "chokidar": "^5.0.0",

@@ -2,10 +2,10 @@
 
 ## 🚀 Quick start
 
-First, copy the content of `src/` folder to your project.
 
-Then, install the dependencies and start the script:
+
+## 👨‍💻 Contributing
+
 ```sh
-npm i
-npm run dev
+git tag v1.0.0 ; git push origin v1.0.0
 ```

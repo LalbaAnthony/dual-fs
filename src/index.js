@@ -1,17 +1,21 @@
-const chokidar = require('chokidar');
-const SftpClient = require('ssh2-sftp-client');
-const ftp = require('basic-ftp');
-const fs = require('fs');
-const path = require('path');
+import chokidar from 'chokidar';
+import SftpClient from 'ssh2-sftp-client';
+import ftp from 'basic-ftp';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const CONFIG = {
     type: 'sftp', // ou 'ftp'
     host: '192.168.0.1',
     port: 22, // 21 pour FTP
     username: 'info',
-    password: 'STr232!13',
+    password: 'passwordhere',
     localDir: '.',
-    remoteDir: '/web/testAnthony',
+    remoteDir: 'pathhere',
     ignore: ['node_modules/**', '.git/**', '*.log', 'dual-fs.js']
 };
 
