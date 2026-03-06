@@ -89,7 +89,8 @@ class Server {
                 await this.client.uploadFrom(localPath, normalizedRemotePath);
             }
 
-            console.log(`📤 Upload: ${localPath} → ${remotePath}`);
+            const timestamp = new Date().toLocaleTimeString();
+            console.log(`[${timestamp}] 📤 Upload: ${localPath} → ${remotePath}`);
         } catch (err) {
             console.error(`❌ Erreur ${this.config.type.toUpperCase()}:`, err.message);
             console.error(err);
@@ -110,7 +111,8 @@ class Server {
                 await this.client.remove(normalizedRemotePath);
             }
 
-            console.log(`🗑️ Suppression: ${normalizedRemotePath}`);
+            const timestamp = new Date().toLocaleTimeString();
+            console.log(`[${timestamp}] 🗑️ Suppression: ${normalizedRemotePath}`);
         } catch (err) {
             console.error(`❌ Erreur suppression ${this.config.type.toUpperCase()}:`, err.message);
             console.error(err);
