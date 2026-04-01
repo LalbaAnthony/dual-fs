@@ -126,7 +126,7 @@ const config = loadConfig();
 const server = new Server(config);
 
 console.log(`\n👀 Surveillance du dossier: ${path.resolve(config.localDir)}`);
-console.log(`\n📁 Dossier sur le serveur: ${config.remoteDir}`);
+console.log(`\n🔗 Dossier sur le serveur: ${config.remoteDir}`);
 console.log(`\n📁 Fichiers ignorés: ${config.ignore.join(', ')}`);
 
 const watcher = chokidar.watch(config.localDir, {
