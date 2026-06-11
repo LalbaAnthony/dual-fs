@@ -1,1 +1,0 @@
-- [ ] Stockage en mémoire de la liste des fichiers jamais modifiés pendant la session + fonction pour tous les revert (pour un `git reset --hard HEAD` par exemple)
